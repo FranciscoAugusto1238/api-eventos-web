@@ -4,7 +4,7 @@
       <v-app-bar-nav-icon @click="drawer = !drawer">
         <v-icon>mdi-menu</v-icon>
       </v-app-bar-nav-icon>
-      <v-toolbar-title>Sistema de Gestão</v-toolbar-title>
+      <v-toolbar-title>Sistema de Gestão IFC</v-toolbar-title>
     </v-app-bar>
     <v-navigation-drawer v-model="drawer" app dark color="grey lighten-2" shaped  class="rounded-xl drawer-custom">
       <v-list>
@@ -44,42 +44,6 @@
             </v-list-item-content>
           </v-list-item>
         </v-list-group>
-        <v-list-group v-model="menuPedido" :prepend-icon="'mdi-cart-plus'">
-          <template v-slot:activator>
-            <v-list-item>
-              <v-list-item-icon>
-                <v-icon>mdi-cart-plus</v-icon>
-              </v-list-item-icon>
-              <v-list-item-content>
-                <v-list-item-title class="black--text">Pedido</v-list-item-title>
-              </v-list-item-content>
-            </v-list-item>
-          </template>
-          <v-list-item to="/cadastro-pedido">
-            <v-list-item-icon>
-              <v-icon>mdi-cart-plus</v-icon>
-            </v-list-item-icon>
-            <v-list-item-content>
-              <v-list-item-title class="black--text">Cadastrar Pedido</v-list-item-title>
-            </v-list-item-content>
-          </v-list-item>
-          <v-list-item to="/listar-pedido">
-            <v-list-item-icon>
-              <v-icon>mdi-format-list-bulleted</v-icon>
-            </v-list-item-icon>
-            <v-list-item-content>
-              <v-list-item-title class="black--text">Lista de Pedidos</v-list-item-title>
-            </v-list-item-content>
-          </v-list-item>
-        </v-list-group>
-        <v-list-item to="/configuracoes">
-          <v-list-item-icon>
-            <v-icon>mdi-cogs</v-icon>
-          </v-list-item-icon>
-          <v-list-item-content>
-            <v-list-item-title class="black--text">⚙ Configurações</v-list-item-title>
-          </v-list-item-content>
-        </v-list-item>
       </v-list>
     </v-navigation-drawer>
     <v-main>

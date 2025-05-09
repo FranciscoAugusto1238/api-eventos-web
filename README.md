@@ -1,4 +1,4 @@
-# az-projeto
+# ifc-projeto
 
 ## Project setup
 ```
