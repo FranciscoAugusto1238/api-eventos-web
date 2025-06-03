@@ -4,6 +4,9 @@ import Home from '../views/home/HomeTela.vue';
 import CadastroProduto from '../views/produto/CadastrarProduto.vue';
 import ListaProdutos from '../views/produto/ListarProduto.vue';
 
+import ListarDespesas from '@/views/eventos/ListarDespesas.vue';
+import EditarDespesas from '@/views/eventos/EditarDespesas.vue';
+
 
 Vue.use(VueRouter);
 
@@ -16,6 +19,8 @@ const routes = [
       { path: '/home', name: 'Home', component: Home },
       { path: '/cadastro-produto', name: 'CadastroProduto', component: CadastroProduto },
       { path: '/listar-produtos', name: 'ListaProdutos', component: ListaProdutos },
+      { path: '/listar-despesas', name: 'ListarDespesas', component: ListarDespesas },
+      { path: '/editar-despesas', name: 'EditarDespesas', component: EditarDespesas },
     ],
   }
 ];
