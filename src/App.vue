@@ -11,6 +11,9 @@ export default {
 </script>
 
 <style>
+
+<!--alterar fontes para Poppins e Nunito-->
+
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;

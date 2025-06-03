@@ -1,8 +1,18 @@
 import Vue from 'vue';
 import VueRouter from 'vue-router';
 import Home from '../views/home/HomeTela.vue';
-import CadastroProduto from '../views/produto/CadastrarProduto.vue';
-import ListaProdutos from '../views/produto/ListarProduto.vue';
+import CadastroEvento from '../views/evento/CadastrarEvento.vue';
+import ListaEventos from '../views/evento/ListarEvento.vue';
+import GerenciarEventos from '../views/evento/GerenciarEventos.vue';
+import SeusEventos from '../views/evento/SeusEventos.vue';
+import EditarEvento from '../views/evento/EditarEvento.vue';
+import DetalhesEvento from '../views/evento/DetalhesEvento.vue';
+import EnviarConvites from '../views/evento/EnviarConvites.vue';
+import EnviarLembrete from '../views/evento/EnviarLembrete.vue';
+import CadastrarDespesas from '../views/evento/CadastrarDespesas.vue';
+import GerenciarDespesas from '../views/evento/GerenciarDespesas.vue';
+import VisualizarPresencas from '../views/evento/VisualizarPresencas.vue';
+import CobrarFinalizar from '../views/evento/CobrarFinalizar.vue';
 
 
 Vue.use(VueRouter);
@@ -14,8 +24,18 @@ const routes = [
     children: [
       { path: '', redirect: '/home' },
       { path: '/home', name: 'Home', component: Home },
-      { path: '/cadastro-produto', name: 'CadastroProduto', component: CadastroProduto },
-      { path: '/listar-produtos', name: 'ListaProdutos', component: ListaProdutos },
+      { path: '/cadastro-evento', name: 'CadastroEvento', component: CadastroEvento },
+      { path: '/gerenciar-eventos', name: 'GerenciarEventos', component: GerenciarEventos},
+      { path: '/listar-eventos', name: 'ListaEventos', component: ListaEventos },
+      { path: '/seus-eventos', name: 'SeusEventos', component: SeusEventos },
+      { path: '/evento/:id/editar', name: 'EditarEvento', component: EditarEvento },
+      { path: '/evento/:id/detalhes', name: 'DetalhesEvento', component: DetalhesEvento},
+      { path: '/evento/enviar-convites', name: 'EnviarConvites', component: EnviarConvites},
+      { path: '/evento/enviar-lembrete', name: 'EnviarLembrete', component: EnviarLembrete},
+      { path: '/evento/cadastrar-despesas', name: 'CadastrarDespesas', component: CadastrarDespesas},
+      { path: '/evento/gerenciar-despesas', name: 'GerenciarDespesas', component: GerenciarDespesas},
+      { path: '/evento/visualizar-presencas', name: 'VisualizarPresencas', component: VisualizarPresencas},
+      { path: '/evento/cobrar-finalizar', name: 'CobrarFinalizar', component: CobrarFinalizar}
     ],
   }
 ];
