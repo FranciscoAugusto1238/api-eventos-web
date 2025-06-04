@@ -1,14 +1,11 @@
 <template>
-  
   <div class="container">
-   
-
     <main class="content">
       <div class="card">
         <h2>Lista de Presença</h2>
         <p class="instruction">Escaneie o código do evento para registrar sua presença:</p>
         <div class="qr-code-container">
-          <img src="@/assets/qrcode-exemplo.png" alt="QR Code do Evento" />
+          <img :src="require('@/assets/qrcode-exemplo.png')" alt="QR Code do Evento" />
         </div>
       </div>
     </main>
@@ -17,7 +14,7 @@
 
 <script>
 export default {
-  name: "ListaPresenca",
+  name: 'ListaPresenca'
 };
 </script>
 

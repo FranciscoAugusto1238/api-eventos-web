@@ -1,100 +1,125 @@
 <template>
-  <div class="pagamento-container">
-    <h2>Pagamento via Pix</h2>
+  <v-container class="pa-4">
+    <v-card class="pa-4" outlined>
+      <v-card-title>
+        <h2 class="text-h5">Pagamento via Pix</h2>
+      </v-card-title>
 
-    <div class="form-field">
-      <label for="valor">Valor total das despesas:</label>
-      <input type="text" id="valor" value="R$ 2350,00" disabled />
-    </div>
-    <div class="form-field">
-          <label>Pagamento Fixo:</label>
-          <input type="text" id="pgfixo" value="R$ 25,00" disabled />
-    </div>
-    <div class="pix-box">
-      <div class="pix-row">
-        <label for="banco">Banco:</label>
-        <input type="text" id="banco" value="Bradesco" disabled/>
-      </div>
-      <div class="pix-row">
-        <label for="titular">Titular:</label>
-        <input type="text" id="titular" value="Igorzao" disabled/>
-      </div>
-      <div class="pix-row">
-        <label for="chave">Chave:</label>
-        <input type="text" id="chave" value="igor-petryy@hotmail.com" disabled/>
-      </div>
-    </div>
-    <div class="form-field">
-     <label>Anexe o comprovante Pix</label>
-          <input type="file" />
-        </div>
-        <v-btn color="primary" @click="carregarProdutos">Pagar</v-btn>
+      <v-card-text>
+        <v-form ref="form" v-model="formValido">
+          <v-row dense>
+            <v-col cols="12" md="6">
+              <v-text-field
+                label="Valor total das despesas"
+                v-model="form.valorTotal"
+                prefix="R$"
+                type="number"
+                :rules="[v => !!v || 'Campo obrigatório']"
+                required
+              />
+            </v-col>
 
-  </div>
+            <v-col cols="12" md="6">
+              <v-text-field
+                label="Pagamento Fixo"
+                v-model="form.pagamentoFixo"
+                prefix="R$"
+                type="number"
+                :rules="[v => !!v || 'Campo obrigatório']"
+                required
+              />
+            </v-col>
+
+            <v-col cols="12">
+              <v-card class="pa-4" outlined>
+                <v-row dense>
+                  <v-col cols="12" md="4">
+                    <v-text-field
+                      label="Banco"
+                      v-model="form.pix.banco"
+                      :rules="[v => !!v || 'Campo obrigatório']"
+                      required
+                    />
+                  </v-col>
+                  <v-col cols="12" md="4">
+                    <v-text-field
+                      label="Titular"
+                      v-model="form.pix.titular"
+                      :rules="[v => !!v || 'Campo obrigatório']"
+                      required
+                    />
+                  </v-col>
+                  <v-col cols="12" md="4">
+                    <v-text-field
+                      label="Chave Pix"
+                      v-model="form.pix.chave"
+                      :rules="[v => !!v || 'Campo obrigatório']"
+                      required
+                    />
+                  </v-col>
+                </v-row>
+              </v-card>
+            </v-col>
+
+            <v-col cols="12">
+              <v-file-input
+                label="Anexe o comprovante Pix"
+                v-model="form.comprovante"
+                accept=".pdf,image/*"
+                show-size
+                :rules="[v => !!v || 'Anexe o comprovante']"
+                required
+              />
+            </v-col>
+
+            <v-col cols="12">
+              <v-btn
+                color="primary"
+                block
+                class="mt-4"
+                @click="enviarPagamento"
+              >
+                Confirmar Pagamento
+              </v-btn>
+            </v-col>
+          </v-row>
+        </v-form>
+      </v-card-text>
+    </v-card>
+  </v-container>
 </template>
 
 <script>
 export default {
   name: "PagamentoPix",
+  data() {
+    return {
+      formValido: false,
+      form: {
+        valorTotal: "",
+        pagamentoFixo: "",
+        pix: {
+          banco: "",
+          titular: "",
+          chave: "",
+        },
+        comprovante: null,
+      },
+    };
+  },
+  methods: {
+    enviarPagamento() {
+      if (this.$refs.form.validate()) {
+        // Aqui você pode enviar os dados para uma API
+        alert("Pagamento confirmado com sucesso!");
+        console.log("Dados enviados:", this.form);
+      } else {
+        alert("Preencha todos os campos obrigatórios.");
+      }
+    },
+  },
 };
 </script>
 
 <style scoped>
-.pagamento-container {
-  max-width: 550px;
-  margin: 60px auto;
-  padding: 20px;
-  background: #ffffff;
-  border-radius: 12px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-h2 {
-  text-align: center;
-  margin-bottom: 30px;
-  font-size: 24px;
-}
-
-.pix-box {
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  padding: 20px;
-  margin-bottom: 30px;
-}
-
-.pix-row {
-  display: flex;
-  align-items: center;
-  margin-bottom: 15px;
-}
-
-.pix-row label {
-  width: 80px;
-  font-weight: 500;
-}
-
-.pix-row input {
-  flex: 1;
-  padding: 8px 10px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-}
-
-.form-field {
-  margin-bottom: 20px;
-}
-
-.form-field label {
-  display: block;
-  margin-bottom: 6px;
-  font-weight: 500;
-}
-
-.form-field input {
-  width: 100%;
-  padding: 8px 10px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-}
-
 </style>
