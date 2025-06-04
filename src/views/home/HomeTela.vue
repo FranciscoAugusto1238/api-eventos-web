@@ -93,7 +93,7 @@
             <v-icon>mdi-cart-plus</v-icon>
           </v-list-item-icon>
           <v-list-item-content>
-            <v-list-item-title class="black--text">Editar Despesas</v-list-item-title>
+            <v-list-item-title class="black--text">Cadastrar Evento</v-list-item-title>
           </v-list-item-content>
         </v-list-item>
 
@@ -102,7 +102,16 @@
             <v-icon>mdi-cart-plus</v-icon>
           </v-list-item-icon>
           <v-list-item-content>
-            <v-list-item-title class="black--text">Editar Despesas</v-list-item-title>
+            <v-list-item-title class="black--text">Cancelar Evento</v-list-item-title>
+          </v-list-item-content>
+        </v-list-item>
+
+ <v-list-item to="/cadastro-despesa-individual">
+          <v-list-item-icon>
+            <v-icon>mdi-cart-plus</v-icon>
+          </v-list-item-icon>
+          <v-list-item-content>
+            <v-list-item-title class="black--text">Cadastrar Despesa</v-list-item-title>
           </v-list-item-content>
         </v-list-item>
 

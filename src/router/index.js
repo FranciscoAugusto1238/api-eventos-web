@@ -20,7 +20,8 @@ import ListaPresenca from '../views/pagamento/ListaPresenca.vue';
 import PagamentoPix from '../views/pagamento/PagamentoPix.vue';
 import CancelarParticipacao from '../views/eventos/CancelarParticipacao.vue'; 
 import RegistrarEvento from '../views/eventos/RegistrarEvento.vue'; 
- 
+import CadastroDespesaIndividual from '../views/eventos/CadastroDespesaIndividual.vue'; 
+
  
 
 Vue.use(VueRouter);
@@ -53,6 +54,8 @@ const routes = [
       { path: '/lista-presenca', name: 'ListaPresenca', component: ListaPresenca },
       { path: '/registro-evento', name: 'RegistrarEvento', component: RegistrarEvento },
       { path: '/cancelar-participacao', name: 'CancelarParticipacao', component: CancelarParticipacao },
+      { path: '/cadastro-despesa-individual', name: 'CadastroDespesaIndividual', component: CadastroDespesaIndividual }, 
+
     ],
   }
   
