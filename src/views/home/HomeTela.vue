@@ -4,7 +4,7 @@
       <v-app-bar-nav-icon @click="drawer = !drawer">
         <v-icon>mdi-menu</v-icon>
       </v-app-bar-nav-icon>
-      <img src="./eventIF.png" alt="Logo do EventIF">
+      <img src="@/assets/EventIF.png" alt="Logo do EventIF">
     </v-app-bar>
     <v-navigation-drawer v-model="drawer" app>
       <v-list>

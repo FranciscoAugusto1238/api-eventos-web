@@ -21,7 +21,8 @@ import PagamentoPix from '../views/pagamento/PagamentoPix.vue';
 import CancelarParticipacao from '../views/eventos/CancelarParticipacao.vue'; 
 import RegistrarEvento from '../views/eventos/RegistrarEvento.vue'; 
 import CadastroDespesaIndividual from '../views/eventos/CadastroDespesaIndividual.vue'; 
-
+import Login from "../views/cadastro/Login.vue";
+import CadastroUsuario from "../views/cadastro/CadastroUsuario.vue";
  
 
 Vue.use(VueRouter);
@@ -31,7 +32,7 @@ const routes = [
     path: '/',
     component: Home,
     children: [
-      { path: '', redirect: '/home' },
+      { path: "/", component: Login },
       { path: '/home', name: 'Home', component: Home },
       { path: '/cadastro-evento', name: 'CadastroEventos', component: CadastroEvento },
       { path: '/eventos', name: 'ListaEventos', component: ListaEventos },
@@ -55,7 +56,7 @@ const routes = [
       { path: '/registro-evento', name: 'RegistrarEvento', component: RegistrarEvento },
       { path: '/cancelar-participacao', name: 'CancelarParticipacao', component: CancelarParticipacao },
       { path: '/cadastro-despesa-individual', name: 'CadastroDespesaIndividual', component: CadastroDespesaIndividual }, 
-
+      { path: "/cadastro-usuario", component: CadastroUsuario },
     ],
   }
   
