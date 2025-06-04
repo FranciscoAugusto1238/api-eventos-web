@@ -1,6 +1,7 @@
 import Vue from 'vue';
 import VueRouter from 'vue-router';
 import Home from '../views/home/HomeTela.vue';
+import FinalizarEvento from '../views/cobrancafinalizacao/FinalizarEvento.vue';
 import CadastroEvento from '../views/evento/CadastrarEvento.vue';
 import ListaEventos from '../views/evento/ListarEvento.vue';
 import GerenciarEventos from '../views/evento/GerenciarEventos.vue';
@@ -13,7 +14,6 @@ import CadastrarDespesas from '../views/evento/CadastrarDespesas.vue';
 import GerenciarDespesas from '../views/evento/GerenciarDespesas.vue';
 import VisualizarPresencas from '../views/evento/VisualizarPresencas.vue';
 import CobrarFinalizar from '../views/evento/CobrarFinalizar.vue';
-
 import ListarDespesas from '@/views/eventos/ListarDespesas.vue';
 import EditarDespesas from '@/views/eventos/EditarDespesas.vue';
 
@@ -41,6 +41,7 @@ const routes = [
       { path: '/evento/cobrar-finalizar', name: 'CobrarFinalizar', component: CobrarFinalizar},
       { path: '/listar-despesas', name: 'ListarDespesas', component: ListarDespesas },
       { path: '/editar-despesas', name: 'EditarDespesas', component: EditarDespesas },
+      { path: 'cobranca-finalizacao', name: 'FinalizarEvento', component: FinalizarEvento },
     ],
   }
 ];

@@ -18,6 +18,15 @@
           </v-list-item-content>
         </v-list-item>
 
+        <v-list-item to="/cobranca-finalizacao">
+            <v-list-item-icon>
+              <v-icon>mdi-cash-multiple</v-icon>
+            </v-list-item-icon>
+            <v-list-item-content>
+              <v-list-item-title class="black--text">Cobrança e Finalização</v-list-item-title>
+            </v-list-item-content>
+          </v-list-item>
+
         <v-list-item to="/gerenciar-eventos">
           <v-list-item-icon>
             <v-icon>mdi-calendar-edit</v-icon>
@@ -82,7 +91,7 @@ export default {
       drawer: false,
       menuProduto: false,
       menuPedido: false,
-      menuEventos: false,
+      menuEvento: false,
     };
   },
 };
