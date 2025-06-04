@@ -14,6 +14,9 @@ import GerenciarDespesas from '../views/evento/GerenciarDespesas.vue';
 import VisualizarPresencas from '../views/evento/VisualizarPresencas.vue';
 import CobrarFinalizar from '../views/evento/CobrarFinalizar.vue';
 
+import ListarDespesas from '@/views/eventos/ListarDespesas.vue';
+import EditarDespesas from '@/views/eventos/EditarDespesas.vue';
+
 
 Vue.use(VueRouter);
 
@@ -36,6 +39,10 @@ const routes = [
       { path: '/evento/gerenciar-despesas', name: 'GerenciarDespesas', component: GerenciarDespesas},
       { path: '/evento/visualizar-presencas', name: 'VisualizarPresencas', component: VisualizarPresencas},
       { path: '/evento/cobrar-finalizar', name: 'CobrarFinalizar', component: CobrarFinalizar}
+      { path: '/cadastro-produto', name: 'CadastroProduto', component: CadastroProduto },
+      { path: '/listar-produtos', name: 'ListaProdutos', component: ListaProdutos },
+      { path: '/listar-despesas', name: 'ListarDespesas', component: ListarDespesas },
+      { path: '/editar-despesas', name: 'EditarDespesas', component: EditarDespesas },
     ],
   }
 ];

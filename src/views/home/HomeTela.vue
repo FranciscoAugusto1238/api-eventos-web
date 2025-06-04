@@ -45,6 +45,64 @@
           </v-list-item-content>
         </v-list-item>
 
+
+        <v-list-group v-model="menuEventos" :prepend-icon="'mdi-cart-plus'">
+          <template v-slot:activator>
+            <v-list-item>
+              <v-list-item-icon>
+                <v-icon>mdi-cart-plus</v-icon>
+              </v-list-item-icon>
+              <v-list-item-content>
+                <v-list-item-title class="black--text">Gerenciar Eventos</v-list-item-title>
+              </v-list-item-content>
+            </v-list-item>
+          </template>
+          <v-list-item to="/listar-despesas">
+            <v-list-item-icon>
+              <v-icon>mdi-cart-plus</v-icon>
+            </v-list-item-icon>
+            <v-list-item-content>
+              <v-list-item-title class="black--text">Listar Despesas</v-list-item-title>
+            </v-list-item-content>
+          </v-list-item>
+          <v-list-item to="/editar-despesas">
+            <v-list-item-icon>
+              <v-icon>mdi-cart-plus</v-icon>
+            </v-list-item-icon>
+            <v-list-item-content>
+              <v-list-item-title class="black--text">Editar Despesas</v-list-item-title>
+            </v-list-item-content>
+          </v-list-item>
+        </v-list-group>
+
+        <v-list-group v-model="menuProduto" :prepend-icon="'mdi-cart-plus'">
+          <template v-slot:activator>
+            <v-list-item>
+              <v-list-item-icon>
+                <v-icon>mdi-cart-plus</v-icon>
+              </v-list-item-icon>
+              <v-list-item-content>
+                <v-list-item-title class="black--text">Produto</v-list-item-title>
+              </v-list-item-content>
+            </v-list-item>
+          </template>
+          <v-list-item to="/cadastro-produto">
+            <v-list-item-icon>
+              <v-icon>mdi-cart-plus</v-icon>
+            </v-list-item-icon>
+            <v-list-item-content>
+              <v-list-item-title class="black--text">Cadastrar Produto</v-list-item-title>
+            </v-list-item-content>
+          </v-list-item>
+          <v-list-item to="/listar-produtos">
+            <v-list-item-icon>
+              <v-icon>mdi-format-list-bulleted</v-icon>
+            </v-list-item-icon>
+            <v-list-item-content>
+              <v-list-item-title class="black--text">Lista de Produtos</v-list-item-title>
+            </v-list-item-content>
+          </v-list-item>
+        </v-list-group>
       </v-list>
     </v-navigation-drawer>
     <v-main>
@@ -66,6 +124,7 @@ export default {
       drawer: false,
       menuProduto: false,
       menuPedido: false,
+      menuEventos: false,
     };
   },
 };
