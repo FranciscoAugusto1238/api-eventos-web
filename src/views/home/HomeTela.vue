@@ -27,7 +27,7 @@
               </v-list-item-content>
             </v-list-item>
           </template>
-          <v-list-item to="/cadastro-produto">
+          <v-list-item to="/cadastro-despesa-individual">
             <v-list-item-icon>
               <v-icon>mdi-cart-plus</v-icon>
             </v-list-item-icon>
