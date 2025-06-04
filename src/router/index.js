@@ -2,8 +2,8 @@ import Vue from 'vue';
 import VueRouter from 'vue-router';
 import Home from '../views/home/HomeTela.vue';
 import FinalizarEvento from '../views/cobrancafinalizacao/FinalizarEvento.vue';
-import CadastroEvento from '../views/evento/CadastrarEvento.vue';
-import ListaEventos from '../views/evento/ListarEvento.vue';
+import CadastroEvento from '../views/eventos/CadastrarEvento.vue';
+import ListaEventos from '../views/eventos/Eventos.vue';
 import GerenciarEventos from '../views/evento/GerenciarEventos.vue';
 import SeusEventos from '../views/evento/SeusEventos.vue';
 import EditarEvento from '../views/evento/EditarEvento.vue';
@@ -27,6 +27,8 @@ const routes = [
     children: [
       { path: '', redirect: '/home' },
       { path: '/home', name: 'Home', component: Home },
+      { path: '/cadastro-evento', name: 'CadastroEventos', component: CadastroEvento },
+      { path: '/eventos', name: 'ListaEventos', component: ListaEventos },
       { path: '/cadastro-evento', name: 'CadastroEvento', component: CadastroEvento },
       { path: '/gerenciar-eventos', name: 'GerenciarEventos', component: GerenciarEventos},
       { path: '/listar-eventos', name: 'ListaEventos', component: ListaEventos },
