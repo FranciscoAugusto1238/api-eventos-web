@@ -18,7 +18,10 @@ import ListarDespesas from '@/views/eventos/ListarDespesas.vue';
 import EditarDespesas from '@/views/eventos/EditarDespesas.vue';
 import ListaPresenca from '../views/pagamento/ListaPresenca.vue';
 import PagamentoPix from '../views/pagamento/PagamentoPix.vue';
-
+import CancelarParticipacao from '../views/eventos/CancelarParticipacao.vue'; 
+import RegistrarEvento from '../views/eventos/RegistrarEvento.vue'; 
+ 
+ 
 
 Vue.use(VueRouter);
 
@@ -48,6 +51,8 @@ const routes = [
       { path: 'cobranca-finalizacao', name: 'FinalizarEvento', component: FinalizarEvento },
       { path: '/pagamento-pix', name: 'PagamentoPix', component: PagamentoPix },
       { path: '/lista-presenca', name: 'ListaPresenca', component: ListaPresenca },
+      { path: '/registro-evento', name: 'RegistrarEvento', component: RegistrarEvento },
+      { path: '/cancelar-participacao', name: 'CancelarParticipacao', component: CancelarParticipacao },
     ],
   }
   

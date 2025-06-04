@@ -88,6 +88,24 @@
           </v-list-item-content>
         </v-list-item>
 
+        <v-list-item to="/registro-evento">
+          <v-list-item-icon>
+            <v-icon>mdi-cart-plus</v-icon>
+          </v-list-item-icon>
+          <v-list-item-content>
+            <v-list-item-title class="black--text">Editar Despesas</v-list-item-title>
+          </v-list-item-content>
+        </v-list-item>
+
+        <v-list-item to="/cancelar-participacao">
+          <v-list-item-icon>
+            <v-icon>mdi-cart-plus</v-icon>
+          </v-list-item-icon>
+          <v-list-item-content>
+            <v-list-item-title class="black--text">Editar Despesas</v-list-item-title>
+          </v-list-item-content>
+        </v-list-item>
+
       </v-list>
     </v-navigation-drawer>
     <v-main>
