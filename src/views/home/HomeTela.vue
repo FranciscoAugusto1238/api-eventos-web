@@ -44,65 +44,23 @@
             <v-list-item-title class="black--text">Seus Eventos</v-list-item-title>
           </v-list-item-content>
         </v-list-item>
+        <v-list-item to="/listar-despesas">
+          <v-list-item-icon>
+            <v-icon>mdi-cart-plus</v-icon>
+          </v-list-item-icon>
+          <v-list-item-content>
+            <v-list-item-title class="black--text">Listar Despesas</v-list-item-title>
+          </v-list-item-content>
+        </v-list-item>
+        <v-list-item to="/editar-despesas">
+          <v-list-item-icon>
+            <v-icon>mdi-cart-plus</v-icon>
+          </v-list-item-icon>
+          <v-list-item-content>
+            <v-list-item-title class="black--text">Editar Despesas</v-list-item-title>
+          </v-list-item-content>
+        </v-list-item>
 
-
-        <v-list-group v-model="menuEventos" :prepend-icon="'mdi-cart-plus'">
-          <template v-slot:activator>
-            <v-list-item>
-              <v-list-item-icon>
-                <v-icon>mdi-cart-plus</v-icon>
-              </v-list-item-icon>
-              <v-list-item-content>
-                <v-list-item-title class="black--text">Gerenciar Eventos</v-list-item-title>
-              </v-list-item-content>
-            </v-list-item>
-          </template>
-          <v-list-item to="/listar-despesas">
-            <v-list-item-icon>
-              <v-icon>mdi-cart-plus</v-icon>
-            </v-list-item-icon>
-            <v-list-item-content>
-              <v-list-item-title class="black--text">Listar Despesas</v-list-item-title>
-            </v-list-item-content>
-          </v-list-item>
-          <v-list-item to="/editar-despesas">
-            <v-list-item-icon>
-              <v-icon>mdi-cart-plus</v-icon>
-            </v-list-item-icon>
-            <v-list-item-content>
-              <v-list-item-title class="black--text">Editar Despesas</v-list-item-title>
-            </v-list-item-content>
-          </v-list-item>
-        </v-list-group>
-
-        <v-list-group v-model="menuProduto" :prepend-icon="'mdi-cart-plus'">
-          <template v-slot:activator>
-            <v-list-item>
-              <v-list-item-icon>
-                <v-icon>mdi-cart-plus</v-icon>
-              </v-list-item-icon>
-              <v-list-item-content>
-                <v-list-item-title class="black--text">Produto</v-list-item-title>
-              </v-list-item-content>
-            </v-list-item>
-          </template>
-          <v-list-item to="/cadastro-produto">
-            <v-list-item-icon>
-              <v-icon>mdi-cart-plus</v-icon>
-            </v-list-item-icon>
-            <v-list-item-content>
-              <v-list-item-title class="black--text">Cadastrar Produto</v-list-item-title>
-            </v-list-item-content>
-          </v-list-item>
-          <v-list-item to="/listar-produtos">
-            <v-list-item-icon>
-              <v-icon>mdi-format-list-bulleted</v-icon>
-            </v-list-item-icon>
-            <v-list-item-content>
-              <v-list-item-title class="black--text">Lista de Produtos</v-list-item-title>
-            </v-list-item-content>
-          </v-list-item>
-        </v-list-group>
       </v-list>
     </v-navigation-drawer>
     <v-main>
@@ -142,12 +100,12 @@ export default {
   transition: background-color 0.3s ease;
 }
 
-.v-navigation-drawer .v-list-item--active{
+.v-navigation-drawer .v-list-item--active {
   background-color: #ACF4CB !important;
   color: black !important;
 }
 
-.v-list-item:hover{
+.v-list-item:hover {
   background-color: #bff4d6;
 }
 
@@ -186,12 +144,14 @@ export default {
 
 .drawer-custom {
   border-radius: 16px !important;
-  margin-left: -3px;  /* Move para a esquerda */
-  margin-top: -5px;   /* Move para cima */
+  margin-left: -3px;
+  /* Move para a esquerda */
+  margin-top: -5px;
+  /* Move para cima */
   overflow: hidden;
 }
 
-img{
+img {
   width: 6%;
   height: auto;
 }
@@ -201,12 +161,12 @@ img{
   display: flex;
   flex-direction: column;
   min-height: 128vh;
-  padding-bottom: 70px; 
+  padding-bottom: 70px;
 }
 
 .content-wrapper {
-  flex: 1; 
-  padding-top: 20px; 
+  flex: 1;
+  padding-top: 20px;
 }
 
 footer {

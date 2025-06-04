@@ -38,9 +38,7 @@ const routes = [
       { path: '/evento/cadastrar-despesas', name: 'CadastrarDespesas', component: CadastrarDespesas},
       { path: '/evento/gerenciar-despesas', name: 'GerenciarDespesas', component: GerenciarDespesas},
       { path: '/evento/visualizar-presencas', name: 'VisualizarPresencas', component: VisualizarPresencas},
-      { path: '/evento/cobrar-finalizar', name: 'CobrarFinalizar', component: CobrarFinalizar}
-      { path: '/cadastro-produto', name: 'CadastroProduto', component: CadastroProduto },
-      { path: '/listar-produtos', name: 'ListaProdutos', component: ListaProdutos },
+      { path: '/evento/cobrar-finalizar', name: 'CobrarFinalizar', component: CobrarFinalizar},
       { path: '/listar-despesas', name: 'ListarDespesas', component: ListarDespesas },
       { path: '/editar-despesas', name: 'EditarDespesas', component: EditarDespesas },
     ],
