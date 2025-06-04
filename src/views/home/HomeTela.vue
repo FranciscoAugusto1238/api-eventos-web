@@ -27,6 +27,24 @@
             </v-list-item-content>
           </v-list-item>
 
+          <v-list-item to="/lista-presenca">
+              <v-list-item-icon>
+                <v-icon>mdi-cash-sync</v-icon>
+              </v-list-item-icon>
+              <v-list-item-content>
+                <v-list-item-title class="black--text">Pagamento</v-list-item-title>
+              </v-list-item-content>
+            </v-list-item>
+
+            <v-list-item to="/pagamento-pix">
+            <v-list-item-icon>
+              <v-icon>mdi-hand-coin-outline</v-icon>
+            </v-list-item-icon>
+            <v-list-item-content>
+              <v-list-item-title class="black--text">Pagamento Pix</v-list-item-title>
+            </v-list-item-content>
+          </v-list-item>
+
         <v-list-item to="/gerenciar-eventos">
           <v-list-item-icon>
             <v-icon>mdi-calendar-edit</v-icon>

@@ -16,6 +16,8 @@ import VisualizarPresencas from '../views/evento/VisualizarPresencas.vue';
 import CobrarFinalizar from '../views/evento/CobrarFinalizar.vue';
 import ListarDespesas from '@/views/eventos/ListarDespesas.vue';
 import EditarDespesas from '@/views/eventos/EditarDespesas.vue';
+import ListaPresenca from '../views/pagamento/ListaPresenca.vue';
+import PagamentoPix from '../views/pagamento/PagamentoPix.vue';
 
 
 Vue.use(VueRouter);
@@ -44,8 +46,11 @@ const routes = [
       { path: '/listar-despesas', name: 'ListarDespesas', component: ListarDespesas },
       { path: '/editar-despesas', name: 'EditarDespesas', component: EditarDespesas },
       { path: 'cobranca-finalizacao', name: 'FinalizarEvento', component: FinalizarEvento },
+      { path: '/pagamento-pix', name: 'PagamentoPix', component: PagamentoPix },
+      { path: '/lista-presenca', name: 'ListaPresenca', component: ListaPresenca },
     ],
   }
+  
 ];
 
 const router = new VueRouter({
